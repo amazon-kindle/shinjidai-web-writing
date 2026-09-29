@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>新時代のWebライティング ― AI・SNS時代を生きる書き手のために</title>
+<meta name="description" content="Webライティングは、死んでいない。AI・SNS時代の今こそ、必要不可欠な技術である。あなたの物語を最高の形で世界に届けるための一冊。全13章・Kindle版。">
+<meta property="og:title" content="新時代のWebライティング ― AI・SNS時代を生きる書き手のために">
+<meta property="og:description" content="Webライティングは、死んでいない。AI・SNS時代の今こそ、必要不可欠な技術である。">
+<meta property="og:type" content="book">
+<style>
+  :root{
+    --ink:#1a1d21;
+    --ink-soft:#4e5661;
+    --paper:#ffffff;
+    --panel:#f3f8fd;          /* 淡 */
+    --accent-soft:#e6f1fb;    /* 淡(面) */
+    --line:#d5e6f5;
+    --accent-mid:#8bbfe6;     /* 中 */
+    --accent:#1c78c0;         /* 濃:爽やかなブルー */
+    --accent-deep:#0f548e;
+    --gray:#7d8591;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",system-ui,sans-serif;
+    line-height:1.95;letter-spacing:.02em;-webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px;}
+  section{padding:84px 0;}
+  .alt{background:var(--panel);}
+  .soft{background:var(--accent-soft);}
+  p{margin:0 0 1.4em;}
+  p:last-child{margin-bottom:0;}
+  strong{font-weight:700;}
+  .em{color:var(--accent-deep);font-weight:700;}
+  .lead-p{font-size:1.06rem;}
+
+  h2{
+    font-size:1.55rem;font-weight:800;line-height:1.55;
+    margin:0 0 26px;padding-bottom:10px;
+    border-bottom:3px solid var(--accent);display:inline-block;
+  }
+  h2.c{display:table;margin-left:auto;margin-right:auto;text-align:center;}
+
+  /* ─── 画像スロット:images/ にファイルを置けば自動で表示。無ければ説明枠 ─── */
+  .ph{
+    position:relative;aspect-ratio:16/9;margin:0 0 30px;border-radius:12px;overflow:hidden;
+    background:repeating-linear-gradient(135deg,#eef5fc,#eef5fc 14px,#e3eef9 14px,#e3eef9 28px);
+    border:1px dashed var(--accent-mid);
+  }
+  .ph::after{
+    content:attr(data-cap);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    padding:20px;text-align:center;color:#7fa3c4;font-size:.86rem;line-height:1.7;
+  }
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+  .ph:has(img){border:none;background:none;}
+
+  /* ─── ヒーロー ─── */
+  header.hero-sec{border-top:6px solid var(--accent);padding:32px 0 12px;}
+  .eyebrow{
+    display:inline-block;color:var(--accent);font-weight:700;font-size:.82rem;
+    border:1px solid var(--accent);border-radius:4px;padding:5px 12px;margin-bottom:24px;letter-spacing:.04em;
+  }
+  .hero{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+    background:linear-gradient(135deg,#0f548e,#1c78c0);}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero-overlay{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+    padding:36px 34px 38px;
+    background:linear-gradient(to bottom,rgba(0,0,0,.08) 0%,rgba(0,0,0,.38) 42%,rgba(0,0,0,.78) 100%);
+  }
+  .hero-overlay h1{
+    color:#fff;margin:0;text-align:left;font-weight:900;
+    font-size:2.45rem;line-height:1.45;letter-spacing:.02em;
+    text-shadow:0 2px 14px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.7);
+  }
+  .hero-overlay h1 .ln{display:inline-block;}
+  .hero-book{align-self:stretch;margin:0 0 12px;color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.06em;
+    text-shadow:0 1px 6px rgba(0,0,0,.6);opacity:.95;}
+  .hero-overlay h1 small{display:block;font-size:1.02rem;font-weight:700;margin-top:12px;opacity:.95;}
+  .hero-lead{font-size:1.1rem;margin:32px 0 0;font-weight:500;}
+  .hero-sub{color:var(--ink-soft);margin:18px 0 0;}
+
+  /* ─── ボタン ─── */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:380px;
+    background:#ffd814;color:#0f1111;border:1px solid #fcd200;text-decoration:none;
+    font-weight:700;font-size:1.1rem;
+    padding:18px 56px;border-radius:999px;letter-spacing:.05em;
+    box-shadow:0 4px 14px rgba(15,17,17,.14);transition:background .15s,transform .15s;
+  }
+  .btn:hover{background:#f7ca00;transform:translateY(-2px);}
+  .ku{margin:16px 0 0;font-size:.92rem;font-weight:700;color:var(--ink);}
+  .ku-badge{display:inline-block;background:var(--accent);color:#fff;font-size:.74rem;
+    padding:2px 10px;border-radius:4px;margin-right:8px;letter-spacing:.03em;vertical-align:1px;}
+  .cta-block .btn-note{margin-top:6px;}
+  .nw{display:inline-block;}
+  .price{margin:18px 0 0;font-size:.95rem;font-weight:700;color:var(--ink);}
+  .price b{font-size:1.45rem;font-weight:900;margin-left:4px;letter-spacing:.02em;}
+  .price small{font-size:.78rem;font-weight:400;color:var(--gray);margin-left:2px;}
+  .price + .ku{margin-top:6px;}
+  .btn-note{font-size:.82rem;color:var(--gray);margin:12px 0 0;}
+  .cta-block{text-align:center;margin:40px 0 0;}
+
+  /* ─── 困りごとリスト ─── */
+  .trouble{
+    display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+    border-radius:10px;padding:15px 18px;margin:12px 0;
+  }
+  .trouble .mk{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);
+    color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.78rem;margin-top:2px;}
+  .trouble p{margin:0;}
+
+  /* ─── 比較カード ─── */
+  .versus{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+  .vs-card{border-radius:12px;padding:22px 22px;}
+  .vs-card h3{margin:0 0 10px;font-size:1.05rem;line-height:1.6;}
+  .vs-card p{margin:0;font-size:.95rem;line-height:1.85;}
+  .vs-paper{background:#fff;border:1px solid var(--line);}
+  .vs-paper h3{color:var(--ink-soft);}
+  .vs-web{background:var(--accent);color:#fff;}
+
+  /* ─── 3つの道 ─── */
+  .roads{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0;}
+  .road{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 18px;text-align:center;}
+  .road .ic{width:50px;height:50px;border-radius:12px;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+  .road .ic svg{width:26px;height:26px;}
+  .road h3{margin:0 0 6px;font-size:1.04rem;}
+  .road p{margin:0;font-size:.88rem;color:var(--ink-soft);line-height:1.75;text-align:left;}
+
+  /* ─── 濃い帯 ─── */
+  .band{background:linear-gradient(180deg,#0f548e 0%,#1c78c0 100%);color:#fff;padding:88px 0;}
+  .band h2{color:#fff;border-bottom-color:rgba(255,255,255,.55);}
+  .band .ph{border-color:rgba(255,255,255,.35);
+    background:repeating-linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.1) 14px,rgba(255,255,255,.05) 14px,rgba(255,255,255,.05) 28px);}
+  .band .ph::after{color:rgba(255,255,255,.75);}
+  .band .ph:has(img){border:none;background:none;box-shadow:0 10px 30px rgba(0,0,0,.25);}
+  .band .big{font-size:1.24rem;font-weight:800;line-height:1.8;margin:30px 0;}
+  .band .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0;}
+  .band .pillar{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;
+    padding:18px 16px;text-align:center;font-weight:700;line-height:1.7;}
+
+  /* ─── 気づき ─── */
+  .turn{font-size:2.1rem;font-weight:900;color:var(--accent);line-height:1.5;margin:36px 0 10px;}
+
+  /* ─── 試し読み A/B ─── */
+  .source{font-size:.86rem;color:var(--gray);margin:-12px 0 26px;}
+  .ab{display:grid;gap:16px;margin:26px 0 32px;}
+  .ab-box{border-radius:12px;padding:22px 24px;line-height:1.9;}
+  .ab-box .tag{display:table;font-weight:800;font-size:.8rem;padding:2px 12px;border-radius:4px;margin-bottom:10px;}
+  .ab-a{border:1.5px solid #c8cfd8;color:var(--ink-soft);background:#fff;}
+  .ab-a .tag{background:#eceff3;color:var(--ink-soft);}
+  .ab-b{background:var(--accent);color:#fff;}
+  .ab-b .tag{background:#fff;color:var(--accent);}
+
+  /* ─── 改行の実演 ─── */
+  .demo{display:grid;gap:14px;margin:26px 0;}
+  .demo-box{border-radius:12px;padding:20px 22px;font-size:.96rem;line-height:1.9;}
+  .demo-box .tag{display:table;font-weight:800;font-size:.78rem;padding:2px 10px;border-radius:4px;margin-bottom:10px;}
+  .demo-before{background:#fff;border:1.5px dashed #c8cfd8;color:var(--ink-soft);}
+  .demo-before .tag{background:#eceff3;}
+  .demo-after{background:#fff;border:2px solid var(--accent);}
+  .demo-after .tag{background:var(--accent);color:#fff;}
+
+  /* ─── 身につくこと ─── */
+  .benefit{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);}
+  .benefit:last-child{border-bottom:none;}
+  .benefit .ic{flex-shrink:0;width:46px;height:46px;border-radius:11px;background:var(--accent-soft);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;}
+  .benefit .ic svg{width:24px;height:24px;}
+  .benefit h3{margin:0 0 4px;font-size:1.04rem;}
+  .benefit p{margin:0;font-size:.94rem;color:var(--ink-soft);line-height:1.8;}
+
+  /* ─── 章の地図 ─── */
+  .stats{display:flex;gap:30px;justify-content:center;margin:0 0 30px;}
+  .stat{text-align:center;}
+  .stat .n{font-size:2.3rem;font-weight:900;color:var(--accent);line-height:1.1;}
+  .stat .l{font-size:.82rem;color:var(--gray);}
+  .chapters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .chapters li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+    display:grid;grid-template-columns:3.3em 1fr;gap:0 10px;}
+  .chapters .no{font-weight:800;color:var(--accent);font-size:.86rem;line-height:1.9;grid-row:span 2;}
+  .chapters .t{font-weight:700;font-size:.96rem;line-height:1.6;}
+  .chapters .d{font-size:.8rem;color:var(--gray);line-height:1.6;}
+
+  /* ─── こんな方へ ─── */
+  .for{list-style:none;margin:0;padding:0;}
+  .for li{position:relative;padding:12px 0 12px 32px;border-bottom:1px dashed var(--accent-mid);}
+  .for li::before{content:"✓";position:absolute;left:4px;top:12px;color:var(--accent);font-weight:900;}
+
+  /* ─── 本の紹介 ─── */
+  .book{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;}
+  .book img{box-shadow:0 14px 34px rgba(27,25,24,.22);}
+  .spec{margin:0;padding:0;list-style:none;}
+  .spec li{display:grid;grid-template-columns:4.5em 1fr;padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem;line-height:1.7;}
+  .spec li span:first-child{color:var(--gray);}
+
+  /* ─── 未来像 ─── */
+  .future{margin:26px 0 30px;display:grid;gap:10px;}
+  .fr{display:grid;grid-template-columns:1fr 34px 1fr;align-items:stretch;gap:0;}
+  .fr .bf{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+    font-size:.92rem;color:var(--gray);line-height:1.7;display:flex;align-items:center;}
+  .fr .ar{display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;}
+  .fr .af{background:var(--accent);color:#fff;border-radius:10px;padding:14px 16px;
+    font-size:.95rem;font-weight:700;line-height:1.7;display:flex;align-items:center;}
+  .voice{font-size:1.45rem;font-weight:900;color:var(--accent-deep);line-height:1.7;margin:22px 0;
+    padding-left:18px;border-left:4px solid var(--accent);}
+
+  /* ─── 今読む理由 ─── */
+  .reasons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 0;}
+  .reason{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px;}
+  .reason .rn{display:inline-block;background:var(--accent);color:#fff;font-size:.76rem;font-weight:800;
+    padding:2px 10px;border-radius:4px;margin-bottom:10px;letter-spacing:.04em;}
+  .reason h3{margin:0 0 8px;font-size:1.04rem;line-height:1.6;}
+  .reason p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8;}
+  .final-push{font-weight:800;color:var(--accent-deep);margin-top:14px !important;}
+
+  /* ─── 著者 ─── */
+  .author-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px 34px;}
+  .author-head{display:flex;align-items:center;justify-content:center;gap:34px;padding-bottom:22px;margin-bottom:22px;
+    border-bottom:1px solid var(--line);}
+  .author-ic{flex-shrink:0;width:104px;height:104px;border-radius:50%;overflow:hidden;background:var(--accent-soft);
+    border:4px solid #fff;box-shadow:0 6px 18px rgba(15,84,142,.16);}
+  .author-ic img{width:100%;height:100%;object-fit:cover;}
+  .author-name{font-weight:800;font-size:1.4rem;letter-spacing:.06em;margin:0;line-height:1.5;}
+  .author-role{font-size:.84rem;color:var(--gray);margin:2px 0 0;letter-spacing:.03em;}
+  .author-bio{margin:0 0 18px;line-height:2;}
+  .author-prod{font-size:.84rem;color:var(--gray);margin:0;}
+
+  /* ─── 最終CTA ─── */
+  .cta-final{background:linear-gradient(160deg,#fff 0%,var(--accent-soft) 100%);border:1px solid #c9def2;
+    border-radius:16px;padding:44px 30px;text-align:center;}
+  .cta-final h2{border:none;display:block;padding:0;}
+  .cta-final .cover-s{width:130px;margin:0 auto 26px;box-shadow:0 10px 26px rgba(27,25,24,.2);}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 110px;text-align:center;color:var(--gray);font-size:.8rem;line-height:1.8;}
+  footer p{margin:0;}
+  .ft-book{color:var(--ink-soft);font-weight:700;font-size:.86rem;}
+  .ft-sep{margin:0 8px;color:var(--line);}
+  .ft-copy{margin-top:6px !important;}
+  .ft-tm{margin-top:10px !important;font-size:.7rem;opacity:.85;}
+
+  /* ─── 追従フッター ─── */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);
+    border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(27,25,24,.07);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+    transform:translateY(110%);transition:transform .3s ease;}
+  .sticky.show{transform:translateY(0);}
+  .sticky-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:18px;}
+  .sticky .st-thumb{width:88px;height:44px;object-fit:cover;border-radius:6px;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+  .sticky .st{flex:0 1 auto;min-width:0;margin:0 10px 0 0;font-size:.88rem;font-weight:700;line-height:1.5;}
+  .sticky .st > span{display:block;font-weight:400;color:var(--gray);font-size:.76rem;white-space:nowrap;}
+  .sticky .btn{min-width:0;padding:11px 24px;font-size:.92rem;white-space:nowrap;box-shadow:none;}
+
+  @media (max-width:640px){
+    section,.band{padding:64px 0;}
+    h2{font-size:1.3rem;}
+    .hero-overlay{padding:22px 20px 24px;background:linear-gradient(to bottom,rgba(0,0,0,.22) 0%,rgba(0,0,0,.5) 40%,rgba(0,0,0,.82) 100%);}
+    .hero-overlay h1{font-size:1.55rem;}
+    .hero-book{font-size:.74rem;margin-bottom:6px;}
+    header.hero-sec{padding-top:20px;}
+    .hero-overlay h1 small{font-size:.8rem;margin-top:6px;}
+    .versus,.roads,.band .pillars,.chapters{grid-template-columns:1fr;}
+    .book{grid-template-columns:1fr;justify-items:center;}
+    .book img{width:160px;}
+    .btn{width:100%;min-width:0;padding:17px 20px;}
+    .sticky .btn{width:auto;}
+    .sticky .pc-only{display:none;}
+    .sticky .st{flex:1;margin:0;font-size:.78rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .sticky .st > span{font-size:.66rem;overflow:hidden;text-overflow:ellipsis;}
+    .sticky .st-thumb{width:50px;height:25px;border-radius:4px;}
+    .sticky .btn{padding:10px 14px;font-size:.82rem;}
+    .sticky-inner{gap:8px;justify-content:flex-start;}
+    .sticky{padding-left:12px;padding-right:12px;}
+    .turn{font-size:1.7rem;}
+    .author-card{padding:24px 20px;}
+    .author-head{gap:24px;}
+    .author-ic{width:84px;height:84px;}
+    .author-name{font-size:1.25rem;}
+    .author-role .sep{display:none;}
+    .ft-book .nw.ft-sep{display:none;}
+    .ft-book .nw{display:block;}
+    .author-role .nw{display:block;line-height:1.7;}
+    .cta-final{padding:36px 18px;}
+    .fr{grid-template-columns:1fr;gap:4px;}
+    .fr .ar{transform:rotate(90deg);height:22px;}
+    .reasons{grid-template-columns:1fr;}
+    .voice{font-size:1.2rem;}
+    .cta-final p{font-size:.95rem;}
+    .ku{font-size:.86rem;}
+  }
+  @media (max-width:375px){.sticky .st-thumb{display:none;}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.sticky{transition:none;}}
+</style>
+</head>
+<body>
+
+<!-- ① ヒーロー -->
+<header class="hero-sec">
+  <div class="wrap">
+    <div class="hero">
+      <img src="images/lpw-hero.jpg" alt="キーボードで文章を書く手元" onerror="this.remove()">
+      <div class="hero-overlay">
+        <p class="hero-book">Kindle本『新時代のWebライティング』</p>
+        <h1><span class="ln">Webライティングは、</span><span class="ln">死んでいない。</span>
+          <small><span class="nw">AI・SNS時代の今こそ、</span><span class="nw">必要不可欠な技術である。</span></small></h1>
+      </div>
+    </div>
+    <p class="hero-lead">あなたの物語を、最高の形で、<br>世界中の人に届けたいと思いませんか。</p>
+    <p class="hero-sub">
+      書くことを続けている人。<br>
+      これから発信を始めたい人。<br>
+      AIで文章を書くようになったけれど、どこか物足りない人。<br>
+      ――この本は、そんな「書き手」のために書きました。
+    </p>
+    <div class="cta-block cta-watch">
+      <a class="btn" href="https://www.amazon.co.jp/dp/B0H2BDCS5Y" target="_blank" rel="noopener">Amazonで読む</a>
+      <p class="price">Kindle版 <b>¥780</b><small>（税込）</small></p>
+      <p class="ku"><span class="ku-badge">Kindle Unlimited</span><span class="nw">会員なら、無料で読めます</span></p>
+      <p class="btn-note">商品ページから無料サンプルも読めます<br><span class="nw">※価格は変更になる場合があります</span></p>
+    </div>
+  </div>
+</header>
+
+<!-- ② 共感 -->
+<section>
+  <div class="wrap">
+    <h2>「Webライティングって、もう古い？」</h2>
+    <figure class="ph" data-cap="［ 挿絵1：スマホでSNSやショート動画を眺める人 ］"><img src="images/lpw-1.jpg" alt="スマホでSNSを眺める人" onerror="this.remove()"></figure>
+    <p class="lead-p">最近、こんな声をよく耳にします。</p>
+    <div class="trouble"><span class="mk">▶</span><p>AIに頼めば、文章は数秒で出来上がる。</p></div>
+    <div class="trouble"><span class="mk">▶</span><p>SNSでは、長い文章よりショート動画のほうがバズる。</p></div>
+    <div class="trouble"><span class="mk">▶</span><p>若い世代は、検索ではなくInstagramでお店を探す。</p></div>
+    <p style="margin-top:26px;">確かに、私たちが「ライティング」と呼んでいたものの形は、大きく変わりました。</p>
+    <p><span class="em">しかし、です。</span><br>
+    文章を書く「技術そのもの」は、決して死んでいません。<br>
+    むしろ、誰もが発信者になれる今だからこそ、その重要性は以前にも増して高まっています。</p>
+  </div>
+</section>
+
+<!-- ③ 問いかけ -->
+<section class="alt">
+  <div class="wrap">
+    <h2>考えてみてください。<br>どちらが、心に届くでしょうか。</h2>
+    <div class="versus">
+      <div class="vs-card vs-paper"><h3>AIが書いた文章を、<br>そのまま使う人</h3><p>整っていて、間違いも少ない。けれど、誰が書いても同じ。</p></div>
+      <div class="vs-card vs-web"><h3>AIが書いた文章を、<br>自分の言葉に磨き直す人</h3><p>その人にしか書けない言葉が、読者の心に残る。</p></div>
+      <div class="vs-card vs-paper"><h3>SNSで毎日<br>100投稿する人</h3><p>数は多い。けれど、流れて消えていく。</p></div>
+      <div class="vs-card vs-web"><h3>週に1投稿だけど、<br>必ず誰かの心を動かす人</h3><p>長く、ファンに愛され続ける。</p></div>
+    </div>
+    <p>答えは、考えるまでもないですよね。</p>
+    <p>本書が伝える「Webライティング」とは、過去のSEOテクニック集ではありません。<br>
+    AI・SNS・検索という大きな変化の中で、あなたの物語を最高の形で世界に届けるための、現代の技術です。</p>
+    <p>本書では、これを<span class="em">「文章のWeb最適化」</span>と呼んでいます。</p>
+  </div>
+</section>
+
+<!-- ④ 紙とWebの違い -->
+<section>
+  <div class="wrap">
+    <h2>Webの文章は、<br>常に「最初の一文」で勝負している。</h2>
+    <figure class="ph" data-cap="［ 挿絵2：スマホの画面をスクロールする指先 ］"><img src="images/lpw-2.jpg" alt="スマホをスクロールする指先" onerror="this.remove()"></figure>
+    <p>紙の本は、読者が「お金を払って買った」ものです。<br>
+    だから、つまらない章があっても「もう少し続けよう」と思ってもらえる。</p>
+    <p>しかし、Webの文章は違います。<br>
+    読者は、検索結果やSNSからふらっと訪れ、つまらないと感じた瞬間にタブを閉じる。<br>
+    そしてタブを閉じた瞬間、あなたの記事は、その読者の頭から消えます。</p>
+    <p>さらに、もう1つ大きな違いがあります。<br>
+    Webでは、読者の前に<span class="em">「機械の目」</span>が立っているのです。<br>
+    検索エンジンやAIが文章の「構造」を読み取り、それから読者に届ける。<br>
+    機械の目にきちんと理解されない文章は、そもそも読者の元に届きません。</p>
+    <div class="versus">
+      <div class="vs-card vs-paper"><h3>紙の本</h3><p>買ってくれた読者が、最後までページをめくってくれる。</p></div>
+      <div class="vs-card vs-web"><h3>Webの文章</h3><p>読者はすぐ離れる。そして、その前に「機械の目」が立っている。</p></div>
+    </div>
+    <p>あなたが時間をかけて書いた文章も、例外ではありません。<br>
+    だからこそ、書く前に「届けるための設計」を知っておくことが、何より大切なのです。</p>
+  </div>
+</section>
+
+<!-- ⑤ 3つの道 -->
+<section class="alt">
+  <div class="wrap">
+    <h2>あなたの物語が届く、3つの道</h2>
+    <p>現代において、あなたの言葉が読者に届く道は、大きく3つあります。</p>
+    <div class="roads">
+      <div class="road">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>検索エンジン</h3><p>知りたいことを検索した人に届く、昔から変わらない王道のルート。</p>
+      </div>
+      <div class="road">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>SNS</h3><p>誰かのシェアで、思いがけず別の誰かに届く。SNS内の検索も増えている。</p>
+      </div>
+      <div class="road">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3>AI</h3><p>AIがあなたの記事を読み込み、要約して誰かに答える。ここ数年で生まれた道。</p>
+      </div>
+    </div>
+    <p>そして、大切なことがあります。<br>
+    検索エンジンも、SNSも、AIも、結局は<span class="em">「あなたが書いた文章」</span>を読み取っているということ。</p>
+    <p>つまり、3つの道に共通する「正しく書く」技術こそが、現代のWebライティングの核心なのです。</p>
+  </div>
+</section>
+
+<!-- ⑥ 山場 -->
+<div class="band">
+  <div class="wrap">
+    <h2>AIが書ける時代だからこそ、<br>人が書く意味は強くなる。</h2>
+    <figure class="ph" data-cap="［ 挿絵3：ノートやPCに向かい、自分の言葉を書く人 ］"><img src="images/lpw-3.jpg" alt="自分の言葉を書く人" onerror="this.remove()"></figure>
+    <p>AIに頼めば、整った文章が数秒で出てきます。<br>
+    論理的で、整然としていて、間違いも少ない。<br>
+    けれど、どこか「無味乾燥」な印象が残ります。</p>
+    <p>なぜか。<br>
+    それは、AIの文章には「あなたが見てきた景色」が含まれていないからです。</p>
+    <div class="pillars">
+      <div class="pillar">あなただけの<br>体験</div>
+      <div class="pillar">あなただけの<br>感情</div>
+      <div class="pillar">あなただけの<br>視点</div>
+    </div>
+    <p>これらは、あなたが生きてきた人生の中でしか生まれません。<br>
+    そして、これこそが、読者の心を動かす源です。</p>
+    <p class="big">「正しい情報」は、AIに聞けば手に入る。<br>
+    しかし「誰かの物語」は、その人にしか語れない。</p>
+  </div>
+</div>
+
+<!-- ⑦ 試し読み -->
+<section>
+  <div class="wrap">
+    <h2>少しだけ、本文から。</h2>
+    <p class="source">第7章「AIが書く時代に、人が書く意味」より</p>
+    <p>「在宅勤務の集中力を上げる方法」を知りたい時、<br>どちらの文章を読みたいですか。</p>
+    <div class="ab">
+      <div class="ab-box ab-a"><span class="tag">A</span>
+        「在宅勤務の集中力を上げるには、適切な環境作り、時間管理、そして集中力を持続させるテクニックが重要です。具体的には…」</div>
+      <div class="ab-box ab-b"><span class="tag">B</span>
+        「在宅勤務を始めて3ヶ月、私はずっと集中できずに悩んでいました。色々試してダメで、半ば諦めかけていた時、たまたま読んだ本に書かれていた『朝の散歩』を試してみたんです。すると…」</div>
+    </div>
+    <p>どちらも、同じテーマです。<br>しかし、読み進めたくなるのは、明らかにBですよね。</p>
+    <p>Bには「書き手の物語」があります。<br>悩み、試行錯誤、気づき。<br>これらが読者の心に届きます。</p>
+    <p>Aは、AIが書いた典型的な文章です。<br>正しいけれど、心が動かない。</p>
+    <p>AI時代に、人が書く意味は、ここにあります。</p>
+    <div class="cta-block cta-watch">
+      <a class="btn" href="https://www.amazon.co.jp/dp/B0H2BDCS5Y" target="_blank" rel="noopener">続きを本書で読む</a>
+      <p class="price">Kindle版 <b>¥780</b><small>（税込）</small></p>
+      <p class="ku"><span class="ku-badge">Kindle Unlimited</span><span class="nw">会員なら、無料で読めます</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 著者の気づき -->
+<section class="soft">
+  <div class="wrap">
+    <h2>正直に言うと、私も<br>「上位表示こそ正義」だと思っていました。</h2>
+    <figure class="ph" data-cap="［ 挿絵4：机で静かに考えごとをする人 ］"><img src="images/lpw-4.jpg" alt="机で考えごとをする人" onerror="this.remove()"></figure>
+    <p>小手先のテクニックで上位を取れたとしても、それは長くは続きません。<br>
+    検索エンジンは、必ずその先を見抜いてきます。</p>
+    <p>その経験を経て、ようやく気づきました。<br>
+    本当に大切なのは、あなたの言葉が<span class="em">「読者の心に届くこと」</span>だと。</p>
+    <p>読者の心に届けば、その言葉は自然と広がり、<br>
+    結果として、検索エンジンにも正しく評価されます。</p>
+    <p class="turn">順番が、<br>逆だったのです。</p>
+    <p style="margin-top:24px;">私が経験を通して、ようやくたどり着いたこの順番。<br>
+    あなたには、最初から知った上で書き始めてほしい。<br>
+    本書は、そのために書きました。</p>
+  </div>
+</section>
+
+<!-- ⑨ 改行の実演 -->
+<section>
+  <div class="wrap">
+    <h2>同じ内容なのに、<br>読みやすさがこんなに変わる。</h2>
+    <p>本書では「何を書くか」だけでなく、「どう見せるか」も大切にしています。<br>
+    たとえば、第3章で紹介している改行のルール。<br>
+    実際に比べてみてください。</p>
+    <div class="demo">
+      <div class="demo-box demo-before"><span class="tag">詰まった文章</span>
+        在宅勤務には、専用の椅子を買うべきです。なぜなら、1日8時間以上座る環境で、椅子の質が体調を左右するからです。私自身、最初の半年は普通のダイニングチェアで仕事をして、ひどい腰痛になりました。だから、在宅勤務を始めるなら、まず椅子に投資してください。</div>
+      <div class="demo-box demo-after"><span class="tag">改行でリズムをつくった文章</span>
+        在宅勤務には、専用の椅子を買うべきです。<br>
+        なぜなら、1日8時間以上座る環境で、椅子の質が体調を左右するからです。<br>
+        私自身、最初の半年は普通のダイニングチェアで仕事をして、ひどい腰痛になりました。<br>
+        だから、在宅勤務を始めるなら、まず椅子に投資してください。</div>
+    </div>
+    <p>後者のほうが、スッと頭に入ってきませんか。</p>
+    <p>Webの文章は、文章だけでなく<span class="em">「余白」もデザイン</span>です。<br>
+    ――実は、今あなたが読んでいるこのページも、同じルールで書かれています。</p>
+  </div>
+</section>
+
+<!-- ⑩ 身につくこと -->
+<section class="alt">
+  <div class="wrap">
+    <h2>この本で、身につくこと</h2>
+    <figure class="ph" data-cap="［ 挿絵5：本を読みながらメモをとる手元 ］"><img src="images/lpw-5.jpg" alt="本を読みながらメモをとる手元" onerror="this.remove()"></figure>
+    <div class="benefit"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div>
+      <div><h3>読者の「本当の問い」を読み解く力</h3><p>検索キーワードの奥にある、不安や迷いに応える文章が書けるようになります。</p></div></div>
+    <div class="benefit"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h13"/></svg></div>
+      <div><h3>最後まで読まれる、構成と見出しの設計</h3><p>見出しだけで内容が伝わり、流し読みされても離脱されない文章の骨組みをつくれます。</p></div></div>
+    <div class="benefit"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+      <div><h3>検索・SNS・AIに正しく届く書き方</h3><p>「機械の目」にも理解され、3つの道すべてで見つけてもらえる文章になります。</p></div></div>
+    <div class="benefit"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+      <div><h3>AIと上手に付き合いながら、自分の声で書く力</h3><p>AIに奪われない「あなたの物語」を、あなたの言葉で語れるようになります。</p></div></div>
+    <div class="benefit"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+      <div><h3>書いた記事を、育てていく習慣</h3><p>リライトとデータの読み方を知り、公開した記事を少しずつ良くしていけます。</p></div></div>
+  </div>
+</section>
+
+
+<!-- ⑩-2 読み終えたあとの未来 -->
+<section class="soft">
+  <div class="wrap">
+    <h2>読み終えたあと、<br>あなたの「書く毎日」はこう変わる。</h2>
+    <p>知識が増えるだけでは、意味がありません。<br>
+    大切なのは、あなたが次に書く一本が、どう変わるかです。</p>
+    <div class="future">
+      <div class="fr"><div class="bf">書く前に、何から書けばいいか毎回迷う</div><div class="ar">→</div><div class="af">読者の「問い」から、迷わず書き始められる</div></div>
+      <div class="fr"><div class="bf">書いて公開しても、反応が返ってこない</div><div class="ar">→</div><div class="af">最後まで読まれ、届く手応えが返ってくる</div></div>
+      <div class="fr"><div class="bf">AIの文章をそのまま使い、どこか物足りない</div><div class="ar">→</div><div class="af">AIを道具にして、自分の言葉で仕上げる</div></div>
+      <div class="fr"><div class="bf">アクセス数の増減に、一喜一憂してしまう</div><div class="ar">→</div><div class="af">数字を「読者の返信」として次に活かせる</div></div>
+      <div class="fr"><div class="bf">自分の文章に、なかなか自信が持てない</div><div class="ar">→</div><div class="af">自分の言葉で届ける自信が持てる</div></div>
+    </div>
+    <p>そして、ある日ふと気づくはずです。</p>
+    <p class="voice">「あれ、自分の文章、<br>前より読まれるようになったな」</p>
+    <p>その瞬間、あなたはもう「文章のWeb最適化」を身につけているのです。</p>
+  </div>
+</section>
+
+<!-- ⑪ データは返信 -->
+<section>
+  <div class="wrap">
+    <h2>数字は、あなたの物語への<br>「読者からの返信」です。</h2>
+    <figure class="ph" data-cap="［ 挿絵6：ノートPCでアクセス数などの画面を見る人 ］"><img src="images/lpw-6.jpg" alt="パソコンで数字を見る人" onerror="this.remove()"></figure>
+    <p>「データ」と聞くと、難しい印象を持つかもしれません。<br>
+    表計算、グラフ、専門用語。<br>
+    苦手意識を持っている書き手も多いはずです。</p>
+    <p>でも、本書では、データを別の視点から捉え直します。</p>
+    <p>記事を読む。途中で離れる。最後まで読む。シェアする。<br>
+    読者のこうした行動は、すべて数字として残ります。<br>
+    つまりデータとは、<span class="em">「読者がどう感じたか」の記録</span>なのです。</p>
+    <p>読者が直接「ここが良かった」と言ってくれることは、めったにありません。<br>
+    けれど、数字を見れば、彼らの本音が見えてくる。<br>
+    データは敵ではなく、味方です。</p>
+  </div>
+</section>
+
+<!-- ⑫ 章の地図 -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="c">全13章で、届く文章を一から組み立てる</h2>
+    <div class="stats">
+      <div class="stat"><div class="n">13</div><div class="l">章</div></div>
+      <div class="stat"><div class="n">73</div><div class="l">節</div></div>
+      <div class="stat"><div class="n">6万</div><div class="l">字</div></div>
+    </div>
+    <ol class="chapters">
+      <li><span class="no">1章</span><span class="t">新時代のWebライティングとは</span><span class="d">なぜ今、この技術が必要なのか</span></li>
+      <li><span class="no">2章</span><span class="t">読者とメディアを理解する</span><span class="d">読者の「問い」を読み解く</span></li>
+      <li><span class="no">3章</span><span class="t">情報設計と構成</span><span class="d">構造が、伝わりやすさを決める</span></li>
+      <li><span class="no">4章</span><span class="t">見出しとリード文</span><span class="d">読まれる入口をつくる</span></li>
+      <li><span class="no">5章</span><span class="t">Web最適化</span><span class="d">検索エンジンに、正しく届ける</span></li>
+      <li><span class="no">6章</span><span class="t">SNS時代のWebライティング</span><span class="d">短い言葉で、心を動かす</span></li>
+      <li><span class="no">7章</span><span class="t">AI時代のWebライティング</span><span class="d">あなたの物語を、AIに奪われないために</span></li>
+      <li><span class="no">8章</span><span class="t">信頼とE-E-A-T</span><span class="d">信頼される書き手になる</span></li>
+      <li><span class="no">9章</span><span class="t">トーンと著者の声</span><span class="d">「私」を出す勇気</span></li>
+      <li><span class="no">10章</span><span class="t">モバイルファーストとアクセシビリティ</span><span class="d">誰にでも読める文章を目指す</span></li>
+      <li><span class="no">11章</span><span class="t">リライトと更新</span><span class="d">書いた記事を、育てていく</span></li>
+      <li><span class="no">12章</span><span class="t">データと改善</span><span class="d">数字は「あなたの物語」への返信</span></li>
+      <li><span class="no">終章</span><span class="t">あなたの物語戦略とワークフロー</span><span class="d">書き続ける仕組みをつくる</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ⑬ こんな方へ -->
+<section>
+  <div class="wrap">
+    <h2>書くことで、<br>誰かに届けたいすべての人へ。</h2>
+    <figure class="ph" data-cap="［ 挿絵7：カフェでノートPCに向かい、発信する人 ］"><img src="images/lpw-7.jpg" alt="カフェで発信する人" onerror="this.remove()"></figure>
+    <ul class="for">
+      <li>ブログやnoteで発信しているけれど、読まれている実感がない</li>
+      <li>SNSの投稿を、もっと遠くまで届けたい</li>
+      <li>AIで文章を書くようになったが、何かが物足りない</li>
+      <li>写真や動画に添える言葉に、いつも迷う</li>
+      <li>お店や仕事のWebページを、自分で書いている</li>
+      <li>これから発信を始めたいが、何から学べばいいか分からない</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ⑭ 最強の書き手は、あなた -->
+<div class="band">
+  <div class="wrap">
+    <h2>これからの時代、<br>最強の書き手は「あなた」です。</h2>
+    <figure class="ph" data-cap="［ 挿絵8：朝の光の中、前を向いて歩き出す人の後ろ姿 ］"><img src="images/lpw-8.jpg" alt="前を向いて歩き出す人" onerror="this.remove()"></figure>
+    <p>完璧な書き手でも、有名な書き手でもありません。<br>
+    自分の物語を、誠実に語り続けるあなたです。</p>
+    <p>派手でなくていい。<br>
+    バズを狙わなくていい。<br>
+    誰かの真似をする必要もない。</p>
+    <p class="big">AIにも、SNSにも、検索にも、振り回されない。<br>
+    自分の物語を、自分の言葉で、世界に届けていく。</p>
+    <p>本書は、そんな書き手になるための一冊です。</p>
+  </div>
+</div>
+
+
+<!-- ⑭-2 なぜ今か -->
+<section class="soft">
+  <div class="wrap">
+    <h2><span class="nw">「いつか書きたい」と</span><span class="nw">思っている言葉が、</span><span class="nw">あなたの中にありませんか。</span></h2>
+    <p>伝えたいことは、ある。<br>
+    でも、うまく書ける自信がまだない。<br>
+    だから、もう少し準備ができてから――。</p>
+    <p>そうやって胸にしまっている言葉は、きっと誰にでもあります。</p>
+    <p>けれど、あなたが「いつか」を待っているあいだにも、<br>
+    その言葉を必要としている誰かが、今日も答えを探しています。</p>
+    <p>だから、始めるのは<span class="em">「今」</span>がいい。<br>
+    そう言える理由が、4つあります。</p>
+    <div class="reasons">
+      <div class="reason"><span class="rn">理由 1</span>
+        <h3>書き方のルールが、今まさに入れ替わっているから</h3>
+        <p>検索に加えて、SNSとAIが読者との入口になりました。<br>この変化は、もう始まっています。古いやり方のまま書き続けるほど、届く人との差は開いていきます。</p></div>
+      <div class="reason"><span class="rn">理由 2</span>
+        <h3>次に書く一本から、すぐに使えるから</h3>
+        <p>Webの文章は、公開したあとも読まれ続ける「資産」です。<br>早く知るほど、これから書くすべての文章が、届く形で積み上がっていきます。</p></div>
+      <div class="reason"><span class="rn">理由 3</span>
+        <h3>誰もがAIで書ける今こそ、「あなたの言葉」が差になるから</h3>
+        <p>整った文章があふれる時代だからこそ、自分の声で語れる書き手が選ばれます。<br>その声を育て始めるのは、早いほうがいい。</p></div>
+      <div class="reason"><span class="rn">理由 4</span>
+        <h3>今日から、スマホで読めるから</h3>
+        <p>Kindle版 ¥780。Kindle Unlimited会員なら無料です。<br>1章から順に読んでも、気になる章から開いても大丈夫。通勤時間の数分からでも始められます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑮ 本の紹介 -->
+<section class="alt">
+  <div class="wrap">
+    <h2>この本について</h2>
+    <div class="book">
+      <img src="images/cover.jpg" alt="新時代のWebライティング 表紙">
+      <ul class="spec">
+        <li><span>書名</span><span>新時代のWebライティング<br>AI・SNS時代を生きる書き手のために</span></li>
+        <li><span>著者</span><span>笹野 明（Akira Sasano）</span></li>
+        <li><span>形式</span><span>Kindle版（電子書籍）</span></li>
+        <li><span>価格</span><span>¥780（税込）／Kindle Unlimited会員は無料</span></li>
+        <li><span>構成</span><span>全13章・73節・約6万字</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ⑯ 著者 -->
+<section>
+  <div class="wrap">
+    <h2>著者について</h2>
+    <div class="author-card">
+      <div class="author-head">
+        <div class="author-ic"><img src="images/author.jpg" alt="著者 笹野 明" onerror="this.remove()"></div>
+        <div>
+          <p class="author-name">笹野 明</p>
+          <p class="author-role"><span class="nw">Akira Sasano</span><span class="sep"> ／ </span><span class="nw">ウェブクリエイター</span></p>
+        </div>
+      </div>
+      <p class="author-bio">ある日突然、デジタル領域に飛び込んだ異色のデジタルクリエイター。<br>
+      ウェブサイト・デザイン構築、動画制作、アプリ開発などのマルチなスキルを生かしつつ、「かつて初心者だったからこそ気づける視点」を大切に、人に喜ばれるプロダクトを追求し続けている。</p>
+      <p class="author-prod">プロダクト：WordPressテーマ「Kuu」／画像収集・最適化ツール「Superior」シリーズ ほか</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑰ 最終CTA -->
+<section>
+  <div class="wrap">
+    <div class="cta-final">
+      <img class="cover-s" src="images/cover.jpg" alt="">
+      <h2>あなたの物語を、世界へ。</h2>
+      <p><span class="nw">本書で新時代のWebライティングを</span><span class="nw">手に入れて、</span><span class="nw">あなたの言葉を、</span><span class="nw">最高の形で世界中に届けましょう。</span></p>
+      <p class="final-push"><span class="nw">次にあなたが書く一本から、</span><span class="nw">変わり始めます。</span></p>
+      <div class="cta-block cta-watch" style="margin-top:30px;">
+        <a class="btn" href="https://www.amazon.co.jp/dp/B0H2BDCS5Y" target="_blank" rel="noopener">Amazonで読む</a>
+        <p class="price">Kindle版 <b>¥780</b><small>（税込）</small></p>
+      <p class="ku"><span class="ku-badge">Kindle Unlimited</span><span class="nw">会員なら、無料で読めます</span></p>
+      <p class="btn-note">商品ページから無料サンプルも読めます<br><span class="nw">※価格は変更になる場合があります</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="ft-book"><span class="nw">新時代のWebライティング</span><span class="nw">〜AI・SNS時代を生きる書き手のために〜</span><span class="nw ft-sep">｜</span><span class="nw">Amazon Kindle版</span></p>
+  <p class="ft-tm">Amazon、Kindle、Kindle Unlimitedは、Amazon.com, Inc.またはその関連会社の商標です。</p>
+</div></footer>
+
+<!-- 追従フッター（本文中のボタンが見えている間は隠れる） -->
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div class="sticky-inner">
+    <img class="st-thumb" src="images/sticky-thumb.jpg" alt="">
+    <p class="st">新時代のWebライティング<span><span class="pc-only">Kindle版 ¥780｜</span>Kindle Unlimited会員なら無料</span></p>
+    <a class="btn" href="https://www.amazon.co.jp/dp/B0H2BDCS5Y" target="_blank" rel="noopener" tabindex="-1">Amazonで読む</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('sticky'), link=bar.querySelector('a');
+  var seen=new Set(), heroPassed=false;
+  function update(){
+    var show=heroPassed && seen.size===0;
+    bar.classList.toggle('show',show);
+    bar.setAttribute('aria-hidden',show?'false':'true');
+    link.setAttribute('tabindex',show?'0':'-1');
+  }
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ e.isIntersecting?seen.add(e.target):seen.delete(e.target); });
+    update();
+  },{threshold:.1});
+  document.querySelectorAll('.cta-watch').forEach(function(t){io.observe(t);});
+  new IntersectionObserver(function(es){ heroPassed=!es[0].isIntersecting; update(); })
+    .observe(document.querySelector('.hero'));
+})();
+</script>
+</body>
+</html>
